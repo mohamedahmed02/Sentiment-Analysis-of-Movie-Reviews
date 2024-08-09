@@ -1,8 +1,5 @@
 import nltk
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('stopwords')
+nltk.data.path.append('./nltk_data')
 import streamlit as st
 from PIL import Image
 from wordcloud import WordCloud
