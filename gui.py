@@ -1,3 +1,8 @@
+import nltk
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('stopwords')
 import streamlit as st
 from PIL import Image
 from wordcloud import WordCloud
@@ -29,11 +34,7 @@ from io import StringIO
 import base64
 
 # Function to perform sentiment analysis
-import nltk
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('stopwords')
+
 def preprocess_text(text):
     # Remove URLs
     text = re.sub(r'http\S+', '', text)
