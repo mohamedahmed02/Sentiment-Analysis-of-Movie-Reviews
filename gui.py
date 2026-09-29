@@ -97,7 +97,7 @@ def main():
                 unsafe_allow_html=True)
     # Displaying the popcorn image
     image = Image.open("popCorn.png")
-    st.image(image, caption='Popcorn', use_column_width=True)
+    st.image(image, caption='Popcorn', use_container_width=True)
 
     st.write("Upload the text file for sentiment analysis:")
     uploaded_file = st.file_uploader("Choose a file", type=['txt'])
@@ -120,7 +120,7 @@ def main():
 
         # Generating and displaying word cloud
         generate_wordcloud(text)
-        st.image("wordcloud.png", use_column_width=True)
+        st.image("wordcloud.png", use_container_width=True)
 
 if __name__ == "__main__":
     main()
